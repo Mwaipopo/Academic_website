@@ -1,0 +1,54 @@
+/*
+	Student Online Registration System
+    by Johh, Kelvin
+*/
+
+/*  ======global styles ======= */
+
+body {
+	
+	background: #bbb url(../_images/page_background.jpg);
+	margin: 0;
+	padding: 0;
+	}
+
+p, h1, h2, h3, h4, h5, h6 {
+	margin: 1ex 1em;
+	}
+div#popupwindowouterDiv {
+	width: 500px;
+	margin: 0 auto;
+	}
+
+ div#line {
+	border-bottom:solid #aaa 1px;
+	}
+				
+/* ==== footer ==== */
+
+div#footer {
+		clear: both;
+		background: transparent;
+		margin: 0 auto;
+		padding: 5px;
+		}
+
+#footer p {
+	font-family: "Trebuchet MS", sans-serif;
+	font-size: .75em;
+	color: olive;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	}
+
+#footer a {
+	color: #1b9d95;
+	text-decoration: none;
+	}
+/* ===== miscellaneous styles ==== */
+
+.clear { clear: both}
+
+ 
+ 

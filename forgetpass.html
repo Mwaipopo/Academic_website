@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="shortcut icon" href="images/logo.png">
+<link href = "_css/popupstyle.css" rel = "stylesheet" type = "text/css">
+<title>Forget Pass</title>
+ <script language="JavaScript" type="text/javascript">
+<!--
+
+function forgetpass ( form )
+{
+
+  if (form.username.value == "") {
+  	alert( "Please fill the User Name field" );
+	form.username.focus();
+	return false;
+  }
+  
+  if (form.email.value == "") {
+  	alert( "Please fill the Email Address" );
+	form.email.focus();
+	return false;
+  }
+  
+  if (form.userid.value == "") {
+  	alert( "Please enter User ID" );
+	form.userid.focus();
+	return false;
+  }
+
+  return true ;
+}
+-->
+</script></head>
+<body>
+	<div id = "popupwindowouterDiv">
+	<p align="center" style = "font-family: Trebuchet MS, sans-serif; font-size: .8em; line-height: 1.2em; color: #666; margin: 0 0 3ex 0;">All form fields are required.</p>
+    <form action="" name="" onsubmit="return forgetpass(this);" method="post">
+	<fieldset style = "background:FFF3CA; border:#960 1px solid;">
+		<legend style = "color:#960; font-size:20px;"><strong>Forgot Password? </strong></legend>
+        <table width="462" border="0" bgcolor="silver" cellspacing="1" cellpadding="0">
+  <tr background="images/tablebackground.jpeg">
+    <td width="149" background="_images/tablebackground.jpeg"><strong>User Name:</strong></td>
+    <td width="310" background="_images/tablebackground.jpeg"><input name="username" type="text" id="label28" size="30" maxlength="30" title = "User Name"/></td>
+    </tr>
+  <tr background="images/tablebackground.jpeg">
+    <td background="_images/tablebackground.jpeg"><strong>Email:</strong></td>
+    <td background="_images/tablebackground.jpeg"><input name="email" type="text" id="label30" size="30" maxlength="30" title = "Email"/></td>
+  </tr>
+  <tr background="images/tablebackground.jpeg">
+    <td background="_images/tablebackground.jpeg"><strong>User ID:</strong></td>
+    <td background="_images/tablebackground.jpeg"><label for="textfield"></label>
+      <input name="userid" type="text" id="userid" size="30" maxlength="30" title = "User ID"/>      
+      <label for="label28"></label></td>
+    </tr>
+    <tr background="images/tablebackground.jpeg">
+    <td colspan="2" background="_images/tablebackground.jpeg"><label for="label41"></label>
+      <div align="center"><input type="submit" name="Submit3" value="Reset" id="label41" title = "Reset Password"/></div></td>
+    </tr>
+</table>
+	</fieldset>
+      <p align="center" style = "font-family: Trebuchet MS, sans-serif; font-size: .8em; line-height: 1.2em; color: #666; margin: 0 0 3ex 0;">A link to reset your password will be sent to your registered email address.</p>
+    </form>
+	<div>
+	<img src = "_images/bottom_image.jpg" width = "500" height = "20"/>
+	</div>
+</div><!--outerDiv-->
+<div id = "footer">
+	<p>Copyright &copy; Student Online Academic System.</p>
+</div>
+</body>
+</html>
