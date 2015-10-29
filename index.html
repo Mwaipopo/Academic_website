@@ -6,237 +6,77 @@
     <title>SOAS - Student Online Academic System</title>
 	<link rel="shortcut icon" href="_images/logo.png">
 	<link href = "_css/main.css" rel = "stylesheet" type = "text/css">
-	<link rel="STYLESHEET" type="text/css" href="_css/fg_membersite.css" />
+	 <link rel="stylesheet" href="_css/bootstrap.min.css"type = "text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 
- <script language="JavaScript" type="text/javascript">
-<!--
-
-function checkpass ( form )
-{
-
-  if (form.username.value == "") {
-  	alert( "Please fill the User Name field" );
-	form.username.focus();
-	return false;
-  }
-  
-  if (form.password.value == "") {
-  	alert( "Please enter Password" );
-	form.password.focus();
-	return false;
-  }
-
-  return true ;
-}
--->
-</script>	
-<script language="javascript">
-var popupWindow = null;
-function centeredPopup(url,winName,w,h,scroll){
-LeftPosition = (screen.width) ? (screen.width-w)/2 : 0;
-TopPosition = (screen.height) ? (screen.height-h)/2 : 0;
-settings =
-'height='+h+',width='+w+',top='+TopPosition+',left='+LeftPosition+',scrollbars='+scroll+',resizable'
-popupWindow = window.open(url,winName,settings)
-}
-</script>
-<style type="text/css">
-<!--
-.forgetpass {float: right; border: 3px solid #E7E9EF; background: #E7E9EF; border-radius: 8px; margin-top: 
-
-3px; margin-left: 20px; padding: 5px; color: olive; font-weight: bold;   text-decoration: none;}
-a:link {
-	text-decoration: none;
-}
-a:visited {
-	text-decoration: none;
-}
-a:hover {
-	text-decoration: none;
-}
-a:active {
-	text-decoration: none;
-}
--->
-</style>
-<!-- 
-Set up the caption font in the following style.
-Place the style script in the head of the page.
-//-->
-
-<style>
-.Caption {
-font-family: Arial;
-font-weight: bold;
-color:      #123456;
-}
-</style>
-
-<!-- 
-Place the following script in the head of the page.
-Follow the set-up instructions within the script.
-//-->
-<script>
-
-// Set the slideshow speed (in milliseconds)
-var SlideShowSpeed = 3000;
-
-// Set the duration of crossfade (in seconds)
-var CrossFadeDuration = 3;
-
-var Picture = new Array(); // don't change this
-var Caption = new Array(); // don't change this
-
-// Specify the image files...
-// To add more images, just continue
-// the pattern, adding to the array below.
-// To use fewer images, remove lines
-// starting at the end of the Picture array.
-// Caution: The number of Pictures *must*
-// equal the number of Captions!
-
-Picture[1]  = '_images/slide/Image001.jpg';
-Picture[2]  = '_images/slide/Image002.jpg';
-Picture[3]  = '_images/slide/Image003.jpg';
-Picture[4]  = '_images/slide/Image004.jpg';
-Picture[5]  = '_images/slide/Image005.jpg';
-Picture[6]  = '_images/slide/Image006.jpg';
-Picture[7]  = '_images/slide/Image007.jpg';
-Picture[8]  = '_images/slide/Image008.jpg';
-Picture[9]  = '_images/slide/Image009.jpg';
-Picture[10] = '_images/slide/Image010.jpg';
-
-// Specify the Captions...
-// To add more captions, just continue
-// the pattern, adding to the array below.
-// To use fewer captions, remove lines
-// starting at the end of the Caption array.
-// Caution: The number of Captions *must*
-// equal the number of Pictures!
-
-Caption[1]  = "Welcome to Harrisburg University.";
-Caption[2]  = "Inside Harrisburg University.";
-Caption[3]  = "School Items.";
-Caption[4]  = "Courses Offered.";
-Caption[5]  = "Outside School Campus.";
-Caption[6]  = "Technology Innovation.";
-Caption[7]  = "HU Website.";
-Caption[8]  = "Map and Directions.";
-Caption[9]  = "Harrisburg City.";
-Caption[10] = "Ten years of Brilliance.";
-
-// =====================================
-// Do not edit anything below this line!
-// =====================================
-
-var tss;
-var iss;
-var jss = 1;
-var pss = Picture.length-1;
-
-var preLoad = new Array();
-for (iss = 1; iss < pss+1; iss++){
-preLoad[iss] = new Image();
-preLoad[iss].src = Picture[iss];}
-
-function runSlideShow(){
-if (document.all){
-document.images.PictureBox.style.filter="blendTrans(duration=2)";
-document.images.PictureBox.style.filter="blendTrans(duration=CrossFadeDuration)";
-document.images.PictureBox.filters.blendTrans.Apply();}
-document.images.PictureBox.src = preLoad[jss].src;
-if (document.getElementById) document.getElementById("CaptionBox").innerHTML= Caption[jss];
-if (document.all) document.images.PictureBox.filters.blendTrans.Play();
-jss = jss + 1;
-if (jss > (pss)) jss=1;
-tss = setTimeout('runSlideShow()', SlideShowSpeed);
-}
-
-</script>
+ 
 </head>
 
-<body onload = "runSlideShow()" bgcolor = "#000000">
+<body>
 <div id = "outerDiv">
  	<div id = "header">	</div>
  	<!-- header -->
 
   <div id = "midBanner">
-<embed src="soas_banner.swf" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer"  quality="high" allowscriptaccess="always" wmode="transparent" align="middle" width="1200" height="40"></embed>
+	<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="program.html">Degree Program</a></li>
+		<li><a href="myhu.html">MyHU</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
   </div> <!-- midBanner --> 
 	<div id = "content">
 	  <div id = "mainContent">
-		<h1>Student Online Academic System</h1>
-		
-				<!--
-The following table holds the images and captions.
-Place the table in your page where you want the slideshow
-to appear.  Follow the instructions for each table cell.
-//-->
+		  
+<div class="container">
+  <div class="jumbotron">
+    <h1>About HU</h1>      
+    <p>Harrisburg University of Science & Technology is a four-year private non-profit 
+	university in Pennsylvania's capital, Harrisburg. The school was founded in 2001, 
+	opened its doors in 2005, and first accredited in 2009. As of September 2015, the 
+	University has 400 undergraduate, 1,800 graduate students and 75 full and part-time faculty. </p> 
+	</div>
 
-<table border = "0" cellpadding = "0" cellspacing = "0">
-  <tr>
-  <td>
- <p style = "font-family: Trebuchet MS, sans-serif; font-size: .8em; line-height: 1.2em; color: #666; margin: 0 0 3ex 0;">SOAS is a simple, but powerful system for managing academic activities in the University.   	</p></td>
-  </tr>
-  <tr>
-    <!--
-    The next table cell holds the images.
-    Set cell and image width and height the same.
-    The img src must have name=PictureBox in its
-    tag.  Usually the first image in the Picture
-    array in the script is used here.
-    //-->
-    <td width = "800" height = "340">
-    <img src= "_images/slide/Image001.jpg" name = "PictureBox" width = "800" height = "340"></td>
-  </tr>
-  <tr>
-    <!-- 
-    The next table cell holds the captions.
-    This table cell must have id=CaptionBox and
-    class=Caption in its tag. The default caption
-    shows whilst loading in all browsers; NS4
-    will show only the default caption, throughout.
-    //-->
-    <td id = "CaptionBox" class = "Caption" align = "center" bgcolor = "#fedcba">
-    This is the default caption.
-    </td>
-  </tr>
-</table>		
-		</div>
-	  <!-- mainContent --> 
-		
-<div id = "sideBar" >
-			<h3> Welcome to Students Online Academic System. Sign In by filling the required data in the fields below. </h3>
-			<div id='fg_membersite'>
-<form id='login' action="" onsubmit="return checkpass(this);" method='post' accept-charset='UTF-8' name = "form">
-<fieldset>
-<legend>Login</legend>
-
-<input type='hidden' name='submitted' id='submitted' value='1'/>
-<div class='short_explanation'>* required fields</div>
-<div><span class='error'><?php echo $err; ?></span></div>
-<div class='container'>
-    <label for='username' >UserName*:</label><br/>
-    <input type='text' name='username' title="Input your  user name" id='username' value='' maxlength="50" /><br/>
-    <span id='login_username_errorloc' class='error'></span>
-</div>
-<div class='container'>
-    <label for='password' >Password*:</label><br/>
-    <input type='password' name='password' title="Input your password" id='password' maxlength="50" /><br/>
-    <span id='login_password_errorloc' class='error'></span>
-</div>
-
-<div class='container'>
-    <input type='submit' name='login' value='Login' />
-</div>
-<p><a href="forgetpass.html" class="forgetpass" title = "Cant access your account?" onclick="centeredPopup(this.href,'myWindow','500','300','yes');return false">Forgot Password?</a></p>
-</fieldset>
-</form>
-<p>You must be a registered member of the system in order for you to login.</p>
-<p><a href="announcements.html" title = "Click to Download Announcements" target="_blank">Announcements</a></p>
-</div>
-		
-	  </div><!-- sideBar -->
+  <div class="row">
+    <div class="col-md-3">
+      <h1>Mission<h1>
+	  <h4>The Harrisburg University of Science and Technology offers innovative academic 
+	  and research programs in science and technology that respond to local and global needs. 
+	  The institution fosters a diverse community of learners, provides access and support to 
+	  students who want to pursue a career in science and technology, and supports business 
+	  creation and economic development.</h4>
+    </div>
+    <div class="col-md-3"> 
+	<h1>Vision</h1>
+      <h4>“Founded to address the need of Pennsylvania’s Capital Region for increased educational 
+	  opportunities in applied science and technology-related fields, the vision of Harrisburg 
+	  University of Science and Technology is to provide academic programs at undergraduate and 
+	  graduate levels for a diversity of learners, using student-centered, technologically advanced, 
+	  and experiential learning designs that emphasize student success, with a sharp focus on 
+	  specific interdisciplinary competencies and strong linkages to career development. 
+	  The desired outcome is the emergence of well-qualified, technically expert graduates 
+	  whose understanding of applied science and technology-related fields is honed by direct 
+	  industry experience and rounded by a sound, cross-disciplinary liberal education.”</h4>
+    </div>
+    <div class="col-md-3"> 
+		<h1>Academics & Student Life</h1>
+		<h4>Harrisburg University has 7 undergraduate and 4 graduate programs in science and 
+		technology related disciplines. The university follows a trimester system. Harrisburg 
+		University does not offer any sports. There is no gym or facility to house a team. Instead, 
+		the university partners with many local civic organizations for student clubs and activities, 
+		such as the Harrisburg Young Professionals (HYP). HU students receive free membership in the 
+		organization, which involves students in various community programs.</h4>
+          </div>
+   
+		</div> <!-- mainContent --> 
 		<p class = "clear"/>
 	</div> <!--content-->
 	<div>
